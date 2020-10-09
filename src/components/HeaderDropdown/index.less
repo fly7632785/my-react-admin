@@ -1,0 +1,28 @@
+@import '~antd/es/style/themes/default.less';
+
+//通用设置 （电脑网页）
+.container > * {
+  background-color: @popover-bg;
+  border-radius: 4px;
+  box-shadow: @shadow-1-down;
+}
+//自适应设置 （手机）
+//如果宽度小于xs(手机)则使用下面的css
+@media screen and (max-width: @screen-xs) {
+  // !important 则设置为权重最高，后面的设置就不能够覆盖它（谨慎使用）
+  .container {
+    width: 100% !important;
+  }
+  .container > * {
+    border-radius: 0 !important;
+  }
+
+  //无用
+  .container {
+    width: 50%
+  }
+  //无用
+  .container > * {
+    border-radius: 10px
+  }
+}

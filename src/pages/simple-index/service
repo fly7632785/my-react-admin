@@ -1,0 +1,13 @@
+import request from "umi-request";
+export async function queryCurrent() {
+  return request('/resume/currentUser')
+}
+export async function queryCompany() {
+  return request('/resume/company')
+}
+export async function queryProject() {
+  return request('/resume/project')
+}
+export async function querySkill() {
+  return request('/resume/skill')
+}
